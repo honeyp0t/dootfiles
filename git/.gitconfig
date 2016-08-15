@@ -1,0 +1,15 @@
+[branch]
+	autosetuprepbase = always
+[color]
+	ui = auto
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[alias]
+	log-fancy = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+	co = checkout
+	contributors = shortlog --summary --numbered
+	unpushed = log --branches --not --remotes --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
+[push]
+	default = simple
