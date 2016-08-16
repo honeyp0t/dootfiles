@@ -201,6 +201,9 @@ alias g=git
 # 
 # alias cd=cd_func
 
+# vim, git, etc in english
+export LANG=en_US.UTF-8
+
 #eval "$(docker-machine env default)"
 
 #complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \

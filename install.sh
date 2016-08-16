@@ -23,4 +23,6 @@ find . -type f \
 		ln -fs $src $dst
 	done
 
+source ~/.bashrc
+
 echo -e "\nOK, done\n"
