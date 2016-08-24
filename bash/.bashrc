@@ -116,7 +116,6 @@ alias l='ls -CF'                              #
 
 alias "gtree"='git log --graph --full-history --all --color --date=short --pretty=format:"%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset"'
 
-alias g=git
 
 # Umask
 #
@@ -205,6 +204,11 @@ alias g=git
 export LANG=en_US.UTF-8
 
 #eval "$(docker-machine env default)"
+
+# Git "g" alias with autocomplete adjustments
+alias g=git
+source /usr/share/bash-completion/completions/git
+complete -o default -o nospace -F _git g
 
 #complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
 #    || complete -o default -o nospace -F _git g
