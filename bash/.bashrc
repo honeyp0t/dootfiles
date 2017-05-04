@@ -114,8 +114,11 @@ alias ll='ls -l'                              # long list
 # alias la='ls -A'                              # all but . and ..
 alias l='ls -CF'                              #
 
-alias "gtree"='git log --graph --full-history --all --color --date=short --pretty=format:"%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset"'
+alias gtree='git log --graph --full-history --all --color --date=short --pretty=format:"%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset"'
 
+# Remove non-existing remote branches that are not tracked locally
+# and remove local branches that are already merged to master and/or dev
+alias gitclean="git fetch -p; git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs git branch -d"
 
 # Umask
 #
