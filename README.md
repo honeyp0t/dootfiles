@@ -48,7 +48,7 @@ and tricks but there is also a script for symlinking them. Use at own risk.
 
 Venture into the repository root.
 
-Run `$ sh install.sh`
+Run `$ sh install.sh` and restart your shell, or run `$ . ./install.sh` and hope that I got the sourcing right.
 
 Solve the puzzle. Symlinks will be created.
 
