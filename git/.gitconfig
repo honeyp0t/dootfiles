@@ -12,5 +12,6 @@
 	s = status
 	contributors = shortlog --summary --numbered
 	unpushed = log --branches --not --remotes --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
+	rekt = reset --hard HEAD
 [push]
 	default = simple
