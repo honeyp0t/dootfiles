@@ -92,6 +92,4 @@ export LANG=en_US.UTF-8
 
 # Git "g" alias with autocomplete adjustments
 alias g=git
-source /usr/share/bash-completion/completions/git
-complete -o default -o nospace -F _git g
 

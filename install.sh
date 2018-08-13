@@ -11,13 +11,25 @@ done
 
 echo -e "\nOk, let's symlink some dootfiles\n"
 
+get_absolute_path() {
+	TARGET_FILE=$1
+	while [ -L "TARGET_FILE" ]
+	do
+		TARGET_FILE=`readlink $TARGET_FILE`
+		cd `dirname $TARGET_FILE`
+		TARGET_FILE=`basename $TARGET_FILE`
+	done
+	DIR=`pwd -P`
+	echo "$DIR/$TARGET_FILE"
+}
+
 find . -type f \
 	-not -path './.git*'  \
 	-not -path '*install.sh' \
 	-not -path '*README.md' -print | \
 	while read filename; do
 		dst=~/$(basename $filename)
-		src=$(readlink -f $filename)
+		src=$(get_absolute_path $filename)
 		echo "Creating symlink $dst => $src"
 
 		ln -fs $src $dst
